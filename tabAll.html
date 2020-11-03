@@ -1,0 +1,27 @@
+{% extends 'access/base.html' %}
+{% block contentTabAll %}
+<div class="content">
+    <div class="container">
+        <div class ="card">
+            <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs" id="mytab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" data-toggle="tab" role="tab">Show All</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="tab" role="tab" onclick="test1('accessDaily')">Show Daily</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content">
+
+                {% block contentAll %}
+                {% endblock %}
+                {% block contentAllCsv %}
+                {% endblock %}
+
+         </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
